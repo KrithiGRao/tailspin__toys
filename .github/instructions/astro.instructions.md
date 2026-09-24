@@ -104,7 +104,7 @@ const game = await getGameById(getDatabase(), Number(id));
 
 ## Client Interactivity (rare)
 
-There is no Svelte/React layer. When a page genuinely needs client behaviour, add a scoped Astro `<script>` using standard DOM APIs. Prefer native interactive elements (`<button>`, `<a href>`) so keyboard and focus behaviour come for free.
+There is no Svelte/React layer. When a page genuinely needs client behaviour, add a scoped Astro `<script>` using standard DOM APIs. Prefer native interactive elements (`<button>`, `<a href>`) so keyboard and focus behaviour come for free, and ensure every interactive control has a `data-testid` for testing.
 
 ## TypeScript
 
