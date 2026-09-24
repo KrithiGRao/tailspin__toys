@@ -37,6 +37,14 @@ This is a crowdfunding platform for games with a developer theme. The applicatio
 - Use TypeScript with explicit types for function parameters and return values, especially in the data layer (`db/`, `src/lib/`)
 - Frontend code (TypeScript, Astro) must pass ESLint checks (`npm run lint`)
 
+### UI and accessibility requirements
+
+- Every interactive element must include a `data-testid` attribute. Use descriptive names that reflect the element's purpose and context.
+- Prefer semantic HTML (`nav`, `main`, `article`, `button`, `a`) and native interactions; reserve `role="menu"` / `role="menuitem"` for true application menus with full keyboard semantics.
+- Use visible focus styles such as `focus:ring-2 focus:ring-blue-500 focus:outline-none` and avoid custom focus traps that break keyboard navigation.
+- Loading and status updates should use `role="status"` and `aria-live="polite"` as needed.
+- Keep the full site in the dark slate theme and follow the guidance in `ui.instructions.md` and `style.instructions.md`.
+
 ### Data Layer Patterns (Drizzle + Node SQLite)
 
 - Define tables in `db/schema.ts`; manage schema changes with drizzle-kit migrations - see `drizzle.instructions.md`

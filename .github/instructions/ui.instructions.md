@@ -22,9 +22,10 @@ Refer to technology-specific instruction files:
 
 ### Testability
 
-- Every interactive element MUST include a `data-testid` attribute
-- Use descriptive test IDs that identify the element's purpose and context
-- Examples: `data-testid="game-card-{game.id}"`, `data-testid="submit-button"`, `data-testid="nav-home"`
+- Every interactive element MUST include a `data-testid` attribute.
+- Use descriptive test IDs that identify the element's purpose and context.
+- Examples: `data-testid="game-card-{game.id}"`, `data-testid="submit-button"`, `data-testid="nav-home"`.
+- This requirement applies to buttons, links, search controls, toggles, and any other control a test or user might interact with.
 
 ### Accessibility
 
